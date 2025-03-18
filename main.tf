@@ -15,7 +15,7 @@ variable "instances" {
 
 resource "aws_instance" "ec2_instances" {
   count         = length(var.instances)
-  ami           = "ami-0024699f66c5b8fd7" # Replace with a valid AMI ID for your region
+  ami           = "ami-0024699f66c5b8fd7" 
   instance_type = var.instances[count.index].instance_type
   key_name      = var.instances[count.index].key_name
 
